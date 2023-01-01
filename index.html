@@ -11,6 +11,9 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@700&display=swap" rel="stylesheet">
 
+    <!-- main.js -->
+    <script defer src="main.js"></script> 
+
     <title>CRL</title>
 </head>
 <body>
@@ -19,6 +22,9 @@
         <!-- main navigation -->
         <header class="nav-header">
             <div class="container">
+                <svg class="nav-toggle" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 9h16.5m-16.5 6.75h16.5" />
+                </svg>                  
                 <div class="logo">CRL</div>
                 <nav class="nav">
                     <ul class="link-list nav__list nav__list--primary">
@@ -49,9 +55,9 @@
         </section>
 
         <!-- three column section -->
-        <section class="three-col">
-            <div class="container row">
-                <div class="col card">
+        <section class="feature-points">
+            <div class="container three-col">
+                <div class="card">
                     <h4>Mobile-first</h4>
                     <p>Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed do
@@ -60,7 +66,7 @@
                         enim ad minim veniam.
                     </p>
                 </div>
-                <div class="col card">
+                <div class="card">
                     <h4>Efficient</h4>
                     <p>Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed do
@@ -69,7 +75,7 @@
                         enim ad minim veniam.
                     </p>
                 </div>
-                <div class="col card">
+                <div class="card">
                     <h4>Done right</h4>
                     <p>Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit, sed do
@@ -83,8 +89,8 @@
 
         <!-- main content section -->
         <section class="main-content">
-            <div class="container row">
-                <article class="article col">
+            <div class="container side-bar-split">
+                <article class="article">
                     <h3>It doesn't have to be so hard</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -122,7 +128,7 @@
             <div class="container">
                 <h2 class="text--light">Just scratching the surface</h2>
                 <div class="row">
-                    <div class="col">
+                    <div class="col about-desc">
                         <h5>About our company</h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et

@@ -80,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     font-weight: 700;
     color: var(--gold);
-    line-height: 1;
+    line-height: 1.1;
 }
 
 h2, h3, h4, h5, p {
@@ -168,6 +168,19 @@ section, footer {
 }
 
 /* nav styles */
+.nav-toggle {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: 3rem;
+    transition: transform 300ms ease-in-out;
+}
+
+.nav-toggle:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 .nav-header {
     background-color: var(--darker-grey-blue);
     color: var(--white);
@@ -182,9 +195,13 @@ section, footer {
 }
 
 .nav {
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 2rem;
+}
+
+.nav--show {
+    display: flex;
 }
 
 .nav__link {
@@ -198,8 +215,7 @@ section, footer {
 }
 
 .hero .container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 2rem;
 }
 
@@ -208,23 +224,81 @@ section, footer {
 }
 
 /* 3 column section */
-.three-col {
+.feature-points {
     background-color: var(--grey);
+}
+
+.three-col {
+    display: grid;
+    align-items: center;
 }
 
 /* main-content section */
 .main-content img {
     margin-bottom: 2rem;
+    width: min(100%, 750px);
 }
 
 .aside-cards {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    justify-content: center;
     gap: 1rem;
+    margin-top: 5rem;
 }
 
 /* footer styles */
 footer h2 {
     margin-bottom: 4rem;
     text-align: center;
+}
+
+.footer .about-desc {
+    max-width: 450px;
+}
+
+@media (width >= 800px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: end;
+    }
+    
+    .aside-cards, .three-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nav-header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .nav, .nav__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .logo {
+        margin: 0;
+    }
+}
+
+@media (width >= 1200px) {
+    
+    .side-bar-split {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 4rem;
+    }
+
+    .aside-cards {
+        grid-template-columns: 1fr;
+    }
 }
